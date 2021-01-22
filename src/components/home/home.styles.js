@@ -16,7 +16,7 @@ grid-template-columns: repeat(4, 1fr);
 grid-template-rows: repeat(3, 1fr);
 margin: 0 9.3rem 0 9.3rem;
 color: ${mainColor};
-}
+ 
 `
 
 export const Heading = styled.h1`
