@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchModels } from "../../store/actions";
+import { fetchModels } from "../../redux/actions";
 import { useHistory } from "react-router-dom";
 import {
     Container,
@@ -8,7 +8,8 @@ import {
     Button,
     ContainerItem,
     Name,
-    SubText
+    SubText,
+    Photo
 } from "./home.styles";
 
 
@@ -33,7 +34,7 @@ const Home = () => {
 
                         <Name>{model.name}</Name>
                         <SubText>{model.year} | $ {model.price}</SubText>
-                        <img src={`./../assets/${model.name}.png`} alt={model.name} />
+                        <Photo src={process.env.PUBLIC_URL + `/assets/${model.name}.png`} alt={model.name} />
                         <Button hover onClick={() => history.push(`/model/${model.id}`)}>
                             Ver Modelo
                     </Button>

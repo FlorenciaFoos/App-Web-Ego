@@ -20,8 +20,9 @@ color: ${mainColor};
 `
 
 export const Heading = styled.h1`
-font-size: 6.7vh;
+font-size: 3.1rem;
 font-weight: bold;
+margin: 0 9.3rem 0 9.3rem;
 color: ${HeadingColor};
 ${FontHome};
 @media (max-width: 768px) {
@@ -76,5 +77,16 @@ ${FontHome};
 
 @media (max-width: 768px) {
     font-size: 4.3vh;
+}
+`
+
+
+export const Photo = styled.img`
+height:18.3vh;
+width:20.9vw;
+object-fit: contain;
+@media (max-width: 768px) {
+    height:22vh;
+  width:75vw
 }
 `
