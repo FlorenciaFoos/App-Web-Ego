@@ -1,15 +1,49 @@
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { fetchModels } from "../../store/actions";
+import { useHistory } from "react-router-dom";
+import {
+    Container,
+    Heading,
+    Button,
+    ContainerItem,
+    Name,
+    SubText
+} from "./home.styles";
 
 
-import React, { Component } from 'react';
+const Home = () => {
+    const history = useHistory();
+    const models = useSelector((state) => state.models);
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(fetchModels());
 
-class Home extends Component {
-    render() {
-        return (
-            <div>
-                <h2>chau home</h2>
-            </div>
-        );
-    }
+    }, [dispatch]);
+    console.log(models, 'models home')
+
+    return (
+        <>
+            <Heading>
+                Descubrí todos los modelos
+           </Heading>
+            <Container>
+                {models.map((model) => (
+                    <ContainerItem key={model.id}>
+
+                        <Name>{model.name}</Name>
+                        <SubText>{model.year} | $ {model.price}</SubText>
+                        <img src={`./../assets/${model.name}.png`} alt={model.name} />
+                        <Button hover onClick={() => history.push(`/model/${model.id}`)}>
+                            Ver Modelo
+                    </Button>
+                    </ContainerItem>
+                ))}
+            </Container>
+
+
+        </>
+    )
 }
 
 export default Home;
