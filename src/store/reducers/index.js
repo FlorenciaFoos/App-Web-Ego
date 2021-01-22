@@ -1,16 +1,16 @@
 const initialState = {
-    models: "",
-    modelDetails: "",
+    models: [],
+    modelDetails: {},
 
 }
 
-export default (state = initialState, { type, payload }) => {
+export default function appReducer(state = initialState, action) {
 
-    switch (type) {
+    switch (action.type) {
         case "MODELS_DATA":
-            return { ...state, models: payload }
+            return { ...state, models: action.payload }
         case "MODEL_DETAILS":
-            return { ...state, modelDetails: payload }
+            return { ...state, modelDetails: action.payload }
 
         default:
             return state
