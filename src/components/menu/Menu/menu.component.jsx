@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
-
-import { Container, Logo, Box, Link } from "./menu.styles";
+import Sidebar from './sidebar.component'
+import { Container, Logo, Box, Link, MenuIcon } from "./menu.styles";
 
 
 
@@ -32,9 +32,10 @@ const Menu = () => {
                 </Box>
                 <Box onClick={() => setNavState(!navState)}>
                     <span>Menú</span>
-
+                    <MenuIcon />
                 </Box>
             </Container>
+            {navState ? <Sidebar /> : ""}
 
         </>
     );

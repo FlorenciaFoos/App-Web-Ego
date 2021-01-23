@@ -14,14 +14,23 @@ border-bottom: 0.1vh solid #cccccc;
 export const Logo = styled(LogoIconSVG)`
 height:5.2vh;
 width:3.3vw;
-margin: 0 7vw 0 1vw;
+margin: 0 2.8vw 0 1vw;
 @media (max-width: 768px) {
     margin: 0 3vw 0 3vw;
     width:9vw;
 }
 
 `
-
+export const MenuIcon = styled(MenuIconSVG)`
+height:2.7vh;
+width:2.1vw;
+margin: 0 1vw 0 1vw;
+cursor:pointer;
+@media (max-width: 768px) {
+    margin: 0 3vw 0 3vw;
+    width:8vw;
+}
+`
 export const Link = styled.button`
 font-family: 'Montserrat', sans-serif;
 font-size: 1rem;

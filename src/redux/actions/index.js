@@ -19,7 +19,7 @@ export const fetchModelDetails = (id) => dispatch => {
 
 }
 
-
+//seteo la vista activa  para el menu
 export const activeView = (type, state) => dispatch => {
     dispatch({
         type: type,
