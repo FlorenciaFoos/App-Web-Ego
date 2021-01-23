@@ -1,5 +1,6 @@
 import axios from "axios"
 
+//fetch de todos los modelos
 export const fetchModels = () => dispatch => {
     axios.get("https://challenge.agenciaego.tech/models").then((res) => {
         dispatch({
@@ -9,6 +10,9 @@ export const fetchModels = () => dispatch => {
     }).catch((error) => console.log(error.message))
 
 }
+
+
+//fetch de un modelo especifico (by ID)
 export const fetchModelDetails = (id) => dispatch => {
     axios.get(`https://challenge.agenciaego.tech/models/${id}`).then((res) => {
         dispatch({
@@ -26,4 +30,5 @@ export const activeView = (type, state) => dispatch => {
         payload: state
     })
 }
+
 
