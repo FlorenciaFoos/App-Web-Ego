@@ -20,75 +20,10 @@ export const fetchModelDetails = (id) => dispatch => {
 }
 
 
-export const currentView = (type, state) => dispatch => {
+export const activeView = (type, state) => dispatch => {
     dispatch({
         type: type,
         payload: state
     })
 }
 
-export const carouselView = (state) => dispatch => {
-    dispatch({
-        type: "mobile",
-        payload: state
-    })
-}
-
-export const menorMayorOption = (models) => {
-
-    return models.sort((a, b) => {
-        if (a.price > b.price) {
-            return 1
-        }
-        if (a.price < b.price) {
-            return -1
-        }
-        return 0
-    })
-
-}
-export const mayorMenorOption = (models) => {
-
-    return models.sort((a, b) => {
-        if (a.price < b.price) {
-            return 1
-        }
-        if (a.price > b.price) {
-            return -1
-        }
-        return 0
-    })
-
-}
-export const nuevosOption = (models) => {
-
-    return models.sort((a, b) => {
-        if (a.year < b.year) {
-            return 1
-        }
-        if (a.year > b.year) {
-            return -1
-        }
-        return 0
-    })
-
-}
-export const viejosOption = (models) => {
-
-    return models.sort((a, b) => {
-        if (a.year > b.year) {
-            return 1
-        }
-        if (a.year < b.year) {
-            return -1
-        }
-        return 0
-    })
-
-}
-export const orderModels = (type, payload) => dispatch => {
-    dispatch({
-        type: type,
-        payload: payload
-    })
-}

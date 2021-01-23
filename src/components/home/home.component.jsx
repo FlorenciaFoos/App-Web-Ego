@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchModels } from "../../redux/actions";
+import { fetchModels, activeView } from "../../redux/actions";
 import { useHistory } from "react-router-dom";
 import {
     Container,
@@ -15,13 +15,19 @@ import {
 
 const Home = () => {
     const history = useHistory();
-    const models = useSelector((state) => state.models);
     const dispatch = useDispatch();
+    const models = useSelector((state) => state.models);
+
+
+
     useEffect(() => {
         dispatch(fetchModels());
 
     }, [dispatch]);
-    console.log(models, 'models home')
+
+
+    dispatch(activeView("home", true));
+    dispatch(activeView("details", false));
 
     return (
         <>
