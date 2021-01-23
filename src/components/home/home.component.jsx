@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchModels, activeView } from "../../redux/actions";
 import { useHistory } from "react-router-dom";
+import Filters from '../filters/filters.component'
 import {
     Container,
     Heading,
@@ -34,6 +35,7 @@ const Home = () => {
             <Heading>
                 Descubrí todos los modelos
            </Heading>
+            <Filters />
             <Container>
                 {models.map((model) => (
                     <ContainerItem key={model.id}>
