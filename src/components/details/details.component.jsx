@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchModelDetails } from "../../redux/actions";
-import { useHistory } from "react-router-dom";
+import { fetchModelDetails, activeView } from "../../redux/actions";
 import { useParams } from "react-router-dom";
+
 import {
     ContainerDetails,
     Photo,
@@ -17,15 +17,16 @@ import {
 
 const Details = () => {
     let { id } = useParams();
-    const history = useHistory();
+    const dispatch = useDispatch();
+    dispatch(activeView("home", false));
+    dispatch(activeView("details", true));
 
     const modelDetails = useSelector((state) => state.modelDetails);
-    const dispatch = useDispatch();
+
     useEffect(() => {
         dispatch(fetchModelDetails(id));
 
     }, [dispatch, id]);
-    console.log(modelDetails, 'modelo por ID detalles')
 
     return (
         <ContainerDetails>

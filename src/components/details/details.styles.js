@@ -23,12 +23,8 @@ export const Photo = styled.img`
 height:20rem;
 width:34.9rem;
 object-fit: contain;
-grid-column: 1/2;
-${props => {
-        if (props.highlights) return css`grid-column: 2/3;`
-        else if (props.highlights2) return css`grid-column: 1/2; grid-row:4;`
-    }
-    }
+${props => props.highlights2 && css`grid-row:4`};
+grid-column:${props => props.highlights ? "2/3" : "1/2"}
 `
 
 

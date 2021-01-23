@@ -22,7 +22,7 @@ color: ${mainColor};
 export const Heading = styled.h1`
 font-size: 3.1rem;
 font-weight: bold;
-margin: 0 9.3rem 0 9.3rem;
+margin: 5.3rem 9.3rem 5rem 9.3rem;
 color: ${HeadingColor};
 ${FontHome};
 @media (max-width: 768px) {
