@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
-
-
+import React from "react";
 
 import {
 
@@ -11,11 +9,8 @@ import {
 } from "./filters.styles";
 
 
-const Filters = () => {
+const Filters = ({ setCategory, category, order, setOrder }) => {
 
-
-    const [category, setCategory] = useState("Todos");
-    const [order, setOrder] = useState("Nada");
 
 
     return (
