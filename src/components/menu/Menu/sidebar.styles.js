@@ -14,7 +14,7 @@ position:fixed;
 top:0;
 right:0;
 font-family: 'Montserrat', sans-serif;
-font-size:1.25rem;
+font-size:2.34vh;
 &:before{
 content: "";
 position: absolute;
@@ -27,8 +27,18 @@ z-index:-1;
 }
 @media (max-width: 768px) {
     position:absolute;
-    top:9.7vh;
-    width:100%;
+    
+    width:100vw;
+    &:before{
+        content: "";
+        position: absolute;
+        top: 70%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #efeeef;
+        z-index:-1;
+        }
 }
 `
 
@@ -44,9 +54,14 @@ export const CloseButton = styled.div`
 display:flex;
 align-items:center;
 margin:4%;
+@media (max-width: 768px) {
+    margin: 6%;
+}
+
 `
 export const ListItem = styled.li`
 padding:1.5%;
+
 `
 
 export const CloseIcon = styled(CloseIconSVG)`

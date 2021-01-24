@@ -14,7 +14,7 @@ border-bottom: 0.1vh solid #cccccc;
 export const Logo = styled(LogoIconSVG)`
 height:5.2vh;
 width:3.3vw;
-margin: 0 2.8vw 0 1vw;
+margin: 0 7vw 0 1vw;
 @media (max-width: 768px) {
     margin: 0 3vw 0 3vw;
     width:9vw;
@@ -33,7 +33,7 @@ cursor:pointer;
 `
 export const Link = styled.button`
 font-family: 'Montserrat', sans-serif;
-font-size: 1rem;
+ 
 font-weight: 600;
 display:inline-block;
 background: none;
@@ -41,7 +41,7 @@ border: none;
 padding-right:3.1vw;
 padding-left:3.1vw;
 cursor:pointer;
-height: 6.1rem;
+height: 4rem;
 &:active, &:focus{
     outline: none;
 }
