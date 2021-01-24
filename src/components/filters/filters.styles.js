@@ -4,7 +4,7 @@ import styled, { css } from "styled-components"
 
 export const Filter = styled.div`
 display:flex;
-font-size:1rem;
+font-size: 1.9vh;
 font-family: 'Montserrat', sans-serif;
 justify-content:space-between;
 align-items: center;
@@ -12,6 +12,8 @@ margin: 0 9.3rem 4.6rem 9.3rem;
 border-bottom: 0.1vh solid #cccccc;
 @media (max-width: 768px) {
    padding-bottom: 1.5vh;
+   margin: 2.3rem 3.3rem 1.75rem 1.3rem;
+   width: 90vw;
 }
 `
 
@@ -52,7 +54,7 @@ export const Select = styled.select`
   background: white;
   color: black;
   padding-left: 0.3vw;
-  font-size: 1rem;
+  font-size: 1.9vh;
   border: none;
   margin-left: 10px;
   outline:none;

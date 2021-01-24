@@ -14,19 +14,27 @@ export const Container = styled.div`
 display:grid;
 grid-template-columns: repeat(4, 1fr);
 grid-template-rows: repeat(3, 1fr);
-margin: 0 9.3rem 0 9.3rem;
+margin: 0 10.6vh 0 10.6vh;
+padding-bottom : 18.3vh;
 color: ${mainColor};
+@media (max-width: 768px) {
+    grid-template-columns:  1fr;
+    margin: auto 0;
+   
+   
+}
  
 `
 
 export const Heading = styled.h1`
-font-size: 3.1rem;
+font-size: 6.7vh;
 font-weight: bold;
-margin: 5.3rem 9.3rem 5rem 9.3rem;
+margin: 5.3rem 9.3rem 1.75rem 9.3rem;
 color: ${HeadingColor};
 ${FontHome};
 @media (max-width: 768px) {
     font-size: 4.3vh;
+    margin: 4.3rem 3.3rem 1.75rem 2.3rem;
 }
 `
 
@@ -59,12 +67,13 @@ align-items:center;
 
 export const Name = styled.h2`
 font-size: 1.75rem;
+margin-bottom: 0.5rem;
 font-weight: 600;
 ${FontHome};
 
 
 @media (max-width: 768px) {
-    font-size: 4.3vh;
+    font-size:3.8vh;
 }
 `
 
@@ -76,7 +85,7 @@ ${FontHome};
 
 
 @media (max-width: 768px) {
-    font-size: 4.3vh;
+    font-size: 2.8vh;
 }
 `
 
